@@ -14,3 +14,8 @@ class Asteroid(CircleShape):
         #moves in a straight ling at a constant speed
         self.position += (self.velocity * dt)
         
+    def split(self):
+        self.kill()
+        if self.radius <= ASTEROID_MIN_RADIUS:
+            return
+        
